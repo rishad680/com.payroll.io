@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>payrollweb1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <context-param>
+    <description>all servelet use this</description>
+    <param-name>report location</param-name>
+    <param-value>D://cognizant/context</param-value>
+  </context-param>
+  <servlet>
+    <description></description>
+    <display-name>LoginController</display-name>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>com.cognizant.payroll.controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description>log out</description>
+    <display-name>LogoutController</display-name>
+    <servlet-name>LogoutController</servlet-name>
+    <servlet-class>com.cognizant.payroll.controller.LogoutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutController</servlet-name>
+    <url-pattern>/Logout</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DemoController</display-name>
+    <servlet-name>DemoController</servlet-name>
+    <servlet-class>com.cognizant.payroll.controller.DemoController</servlet-class>
+    <init-param>
+      <description>user pdf file location</description>
+      <param-name>fileinfo</param-name>
+      <param-value>d://abc/amd.pdf</param-value>
+    </init-param>
+    <init-param>
+      <description>db url to access another db</description>
+      <param-name>dburl</param-name>
+      <param-value>mysql://localhost:3306/payroll</param-value>
+    </init-param>
+    <init-param>
+      <description>db user name</description>
+      <param-name>dbuser</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <description>db root password</description>
+      <param-name>dbpwd</param-name>
+      <param-value>root</param-value>
+    </init-param>
+    <init-param>
+      <description>db driver</description>
+      <param-name>dbdriver</param-name>
+      <param-value>com.mysql.jdbc.Driver</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DemoController</servlet-name>
+    <url-pattern>/DemoController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Demo2Controller</display-name>
+    <servlet-name>Demo2Controller</servlet-name>
+    <servlet-class>com.cognizant.payroll.controller.Demo2Controller</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Demo2Controller</servlet-name>
+    <url-pattern>/Demo2Controller</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegisterController</display-name>
+    <servlet-name>RegisterController</servlet-name>
+    <servlet-class>com.cognizant.payroll.controller.RegisterController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterController</servlet-name>
+    <url-pattern>/RegisterController</url-pattern>
+  </servlet-mapping>
+</web-app>

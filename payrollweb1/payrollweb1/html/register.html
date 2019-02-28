@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register</title>
+</head>
+<body>
+<h1 style="font-family:verdana;text-align:center;">Employee Registration</h1>
+<table>
+<form name="reg_form" id="reg_form" action="/payrollweb1/RegisterController" method="post">
+<tr>
+	 <td>name</td>	
+	 <td><input type="text" id="name" name="name"></td>
+	 <tr></tr>
+	 <td></td>
+	  <td></td>
+	 </tr>
+	 <tr>
+	  <td>Mobile Number</td>	
+	  <td><input type="number" id="mb_num" name="mb_num"><td> 
+	 </tr> 
+		<tr> 
+		<td> Gender</td> <td><input type="radio" name="gender" value="male" checked> Male<br></td>
+  		<td><input type="radio" name="gender" value="f"> Female<br></td>
+  		<td><input type="radio" name="gender" value="o"> Other <br></td>
+  		</tr>
+  		<tr>
+		<td> Email-ID</td> <td><input type="email" id="email" name="email"></td> 
+		</tr>
+		<tr>
+		<td> Date Of Birth</td> 
+		<td><input type="date" id="dob" name="dob"></td>
+		</tr> 
+		<tr>
+			<td> Salary</td>
+			<td> <input type="number" id="sal" name="sal"> </td>
+			</tr>
+			<tr>
+			<td> Street</td>
+			<td> <input type="text" id="street" name="street"></td>
+			</tr>
+			
+			<tr>
+			<td> city </td>
+			<td><select  id="city" name="city"> 
+			<option value="hyd">hyderabad
+			<option value="chn">chennai
+			<option value="pune">pune
+			<option value="blr">banglore
+			<option value="cbe">Coimbatore
+			 </select></td>
+			 </tr>
+			
+			<tr>
+			 <td>State</td> 
+			 <td><select  id="state" name="state"> 
+			<option value="AP">Andhra Pradhesh
+			<option value="TN">Tamil Nadu
+			<option value="MH">MAharashtra
+			</select></td>
+			</tr>
+			
+			<tr>
+				<td> Country</td> 
+				<td><select  id="country" name="country"> 
+			<option value="IN">India
+			<option value=BAN">Bangaladesh
+			<option value="USA">United States
+			</select></td>
+			</tr>
+			<tr>
+			<td> PINcode</td> 
+			<td><input type="number" id="code" name="code"> </td>
+			</tr>
+			<tr>
+				<td> DEsignation</td> 
+				<td><select  id="DesignationId" name="DesignationId"> 
+			<option value="1001">tester
+			<option value=1002">developer
+					<option value="1003">HR
+			</select>
+			</td>
+			</tr>
+	<tr>		
+	 
+	 <td>Skills </td>   	
+	 <td><input type="checkbox" name="skillId" value="10"> java<br>
+  		<input type="checkbox" name="skillId" value="11"> csharp<br>
+  		<input type="checkbox" name="skillId" value="12"> .net<br>
+  		</tr>
+  	
+  		<tr>
+  		<td> Department</td>
+  		 <td><select  id="departmentId" name="departmentId"> 
+			<option value="1001">AC
+			<option value=1002">Marketing
+					<option value="1003">TRaining
+			</select></td>
+  		
+  		</tr>
+  		<tr>	
+  		<td><input type="submit" name="submit" id="submit" value="Register"></td>
+  		</tr>
+</form>
+</table>
+</body>
+</html>
